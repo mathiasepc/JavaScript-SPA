@@ -40,19 +40,19 @@ await returns the value of the promise, which is the HTML content.
 * */
 
 router.add(SLASH, async () => {
-    const html = await load("/app/html/fragments/home.html")();
+    const html = await load("JavaScript-SPA/app/html/fragments/home.html")();
     const module= await import("./pages/home.js")
     return {html, module};
 });
 router.add("/arbejde", async () => {
-    const html = await load("/app/html/fragments/arbejde.html")();
+    const html = await load("JavaScript-SPA/app/html/fragments/arbejde.html")();
     const module= await import("./pages/arbejde.js")
     return {html, module};
 });
 router.add("/404", async () => {
-    const html = await load("/app/html/fragments/404.html")();
+    const html = await load("JavaScript-SPA/app/html/fragments/404.html")();
     // If the html page got no JavaScript, we can return an empty object
-    return html;
+    return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 
 export default router;
