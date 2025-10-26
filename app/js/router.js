@@ -123,12 +123,6 @@ export class Router {
             ? pathname
             : LEADING_SLASH + pathname;
 
-        // Remove the root path if present
-        // Prevents double slashes in the URL
-        if (this.root !== LEADING_SLASH && p.startsWith(this.root))
-            // remove the root path from the path
-            p = LEADING_SLASH + p.slice(this.root.length);
-
         // If the path is empty, return the root path
         return p === ""
             ? LEADING_SLASH

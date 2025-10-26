@@ -37,7 +37,10 @@ const load = (src) => async () => {
 explain: await load("/app/html/fragments/home.html")();
 load returns a function that returns a promise.
 await returns the value of the promise, which is the HTML content.
+
+Calls the add method from the router script and add new routes
 * */
+
 
 router.add(SLASH, async () => {
     const html = await load("JavaScript-SPA/app/html/fragments/home.html")();
@@ -55,4 +58,3 @@ router.add("/404", async () => {
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 
-export default router;
