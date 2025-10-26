@@ -47,7 +47,7 @@ router.add(SLASH, async () => {
     const module= await import("./pages/home.js")
     return {html, module};
 });
-router.add("/arbejde", async () => {
+router.add("/arbejde" || "/arbejde/", async () => {
     const html = await load("JavaScript-SPA/app/html/fragments/arbejde.html")();
     const module= await import("./pages/arbejde.js")
     return {html, module};

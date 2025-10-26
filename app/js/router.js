@@ -20,8 +20,9 @@ export class Router {
             const link = event.target.closest("[data-link]");
             if (!link) return;
 
-            // Lets the browser handle the link if it's a new tab or a link to the same page'
+            // Not allow middle-click, right-click, or cmd/ctrl clicks
             if (event.metaKey || event.ctrlKey || event.button === 1) return;
+
 
             const url = new URL(link.href, location.href);
             if (url.origin !== location.origin) return;
