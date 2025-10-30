@@ -12,37 +12,60 @@
         </p>
     </div>
     <!-- about me section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-12">
+        <!-- About Me section -->
         <div class="mt-12 md:mt-0">
-            <h3 class="text-gray-900 text-lg font-semibold">
+            <h3 class="text-gray-900 text-lg font-semibold mb-4">
                 About me
             </h3>
-            <div class="mt-4 flex items-start gap-6">
-                <img src="/JavaScript-SPA/app/img/mathias.jpeg"
-                     alt="Me"
-                     class="w-32 h-32 rounded-full object-cover shadow-lg shrink-0 flex-none">
-                <p class="text-gray-400 dark:text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-                    eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et magna quis elit
-                    efficitur consequat. Mauris eleifend velit a pretium iaculis. Donec sagittis velit
-                        et magna euismod, vel aliquet nulla malesuada. Nunc pharetra massa lectus,
-                    a fermentum arcu volutpat vel.
+
+            <!-- Image + text side by side -->
+            <div class="flex flex-col md:flex-row items-start gap-6">
+                <!-- Left side: image + contact -->
+                <div class="flex flex-col items-center md:items-start shrink-0 text-center md:text-left">
+                    <img
+                            src="/JavaScript-SPA/app/img/mathias.jpeg"
+                            alt="Me"
+                            class="w-32 h-32 rounded-full object-cover shadow-lg mb-4"/>
+
+                    <div class="text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                        <h4 class="font-semibold text-gray-900 dark:text-black-400 mb-1">
+                            Contact information
+                        </h4>
+                        <p>💻: 42492542</p>
+                        <p>🏠: Hellerup</p>
+                        <p>👨‍💻: Mathias Ege Pontoppidan Clausen</p>
+                        <p>📧: mathiasepc@msn.com</p>
+                    </div>
+                </div>
+
+                <!-- Right side: description -->
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    I’m a structured and detail-oriented developer with an interest in systems integration,
+                    automation and clean, maintainable code. I enjoy working with debugging and data
+                    optimization, especially when it involves improving data flows and building solutions
+                    that are efficient and easy to maintain. I have experience with full-stack development
+                    and integration projects which gives me an understanding of system architecture and data
+                    handling across layers. I thrive in dynamic environments where I can take ownership,
+                    dive into complex problems and collaborate closely with both developers and stakeholders
+                    to deliver robust, reliable solutions.
                 </p>
             </div>
         </div>
 
-        <!-- about this setup section -->
+        <!-- About this setup section -->
         <div class="max-w-lg">
-            <h3 class="text-gray-900 text-lg font-semibold text-black-400 dark:text-black-500">
+            <h3 class="text-gray-900 text-lg font-semibold mb-4">
                 About this setup
             </h3>
-            <p class="mt-4 text-gray-400 dark:text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis eros at lacus
-                feugiat hendrerit sed ut tortor. Suspendisse et magna quis elit efficitur consequat.
-                Mauris eleifend velit a pretium iaculis. Donec sagittis velit et magna euismod,
-                vel aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum arcu volutpat vel.
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis eros at lacus feugiat
+                hendrerit sed ut tortor. Suspendisse et magna quis elit efficitur consequat. Mauris eleifend
+                velit a pretium iaculis. Donec sagittis velit et magna euismod, vel aliquet nulla malesuada.
+                Nunc pharetra massa lectus, a fermentum arcu volutpat vel.
             </p>
         </div>
     </div>
+
 </div>
 </body>
