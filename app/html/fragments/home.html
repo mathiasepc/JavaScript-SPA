@@ -8,7 +8,7 @@
             <p class="mt-3 text-gray-600 dark:text-gray-400 leading-relaxed">
                 Here you can find a list of my work experience and education.
                 In the future, I will upload different APIs that I've developed for testing.
-                I will continuously update this homepage with new content.
+                I will continuously update my webpage with new content.
             </p>
         </div>
 
@@ -33,13 +33,22 @@
             <section class="max-w-lg">
                 <h3 class="text-gray-900 text-lg font-semibold mb-4">Setup details</h3>
                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    I’m running a Raspberry Pi 5 with a 16 GB SD card, which I use as a web server. On my Raspberry Pi, I’ve
-                    disabled the root user and enabled SSH access using an SSH key. File and folder permissions are configured
-                    with read/write access only where necessary, and only essential ports are open. On this server, I’ve deployed
-                    a webpage running on an Nginx server, which is protected behind a Caddy reverse proxy. I’ve set up a Docker
-                    environment with multiple containers on a shared Docker network so only one external port is exposed, managed
-                    via docker-compose. Soon I plan to deploy two REST APIs for testing — one in Java and one in C#. For data
-                    storage, I’m using PostgreSQL, and I plan to integrate Cloudflare.
+                    I’m running a Raspberry Pi 5 with a 16 GB SD card, which I use as a web server.
+                    On the Raspberry Pi, I’ve disabled the root user and enabled SSH access using an
+                    SSH key. File and directory permissions are configured with read/write access
+                    only where necessary, and only essential ports are open on the router.
+
+                    The server hosts a website running on Nginx, which is protected behind a Caddy
+                    reverse proxy. Caddy also manages my SSL certificates and enforces security and
+                    privacy headers.
+
+                    I’ve set up a Docker environment with multiple containers connected through a
+                    shared Docker network, exposing only a single external port. The containers are
+                    managed using Docker Compose.
+
+                    Soon, I plan to deploy two REST APIs for testing — one in Java and one in C#.
+                    For data storage, I’m using PostgreSQL, and I plan to integrate Cloudflare for
+                    additional security and performance.
                 </p>
             </section>
 
