@@ -50,6 +50,10 @@ router.add("/work", async () => {
     const html = await load("JavaScript-SPA/app/html/fragments/work.html")();
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
+router.add("/education", async () => {
+    const html = await load("JavaScript-SPA/app/html/fragments/education.html")();
+    return {html, module: {init: () =>{}, cleanup: () => {}}};
+});
 router.add("/404", async () => {
     const html = await load("JavaScript-SPA/app/html/fragments/404.html")();
     // If the html page got no JavaScript, we can return an empty object
