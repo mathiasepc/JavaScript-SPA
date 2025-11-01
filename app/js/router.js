@@ -33,9 +33,6 @@ export class Router {
 
         // "popstate" handles back/forward buttons in the browser
         window.addEventListener("popstate", () => this.resolveRoute());
-
-        // Initial route handling
-        this.resolveRoute();
     }
 
     // Define a new route
@@ -45,6 +42,11 @@ export class Router {
         const r = this.normalizePath(route);
         // Add the route to the route map
         this.routes[r] = handler;
+    }
+
+    start(){
+        // Initial route handling
+        this.resolveRoute();
     }
 
     // The only href-link that starts with a leading slash is the root path

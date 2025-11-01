@@ -60,3 +60,4 @@ router.add("/404", async () => {
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 
+router.start();
