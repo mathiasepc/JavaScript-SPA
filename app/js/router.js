@@ -44,6 +44,7 @@ export class Router {
         this.routes[r] = handler;
     }
 
+    // Moved this from constructor. Created issues on first load
     start(){
         // Initial route handling
         this.resolveRoute();
