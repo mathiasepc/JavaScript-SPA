@@ -28,7 +28,7 @@ export class Router {
             if (url.origin !== location.origin) return;
 
             event.preventDefault();
-            this.navigate(url.pathname + url.search + url.hash);
+            this.navigate(url.pathname);
         });
 
         // "popstate" handles back/forward buttons in the browser
