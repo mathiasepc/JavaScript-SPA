@@ -44,13 +44,11 @@ Calls the add method from the router script and add new routes
 
 router.add(SLASH, async () => {
     const html = await load("JavaScript-SPA/app/html/fragments/home.html")();
-    const module= await import("./pages/home.js")
-    return {html, module};
+    return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
-router.add("/arbejde" || "/arbejde/", async () => {
-    const html = await load("JavaScript-SPA/app/html/fragments/arbejde.html")();
-    const module= await import("./pages/arbejde.js")
-    return {html, module};
+router.add("/work", async () => {
+    const html = await load("JavaScript-SPA/app/html/fragments/work.html")();
+    return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 router.add("/404", async () => {
     const html = await load("JavaScript-SPA/app/html/fragments/404.html")();
