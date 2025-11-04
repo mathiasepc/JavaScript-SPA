@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     profileBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         toggleProfileMenu();
-    })
+    });
 
     // Function for showing and hiding the menu
     const hideBurgerMenu = () => {
