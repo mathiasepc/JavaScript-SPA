@@ -59,5 +59,9 @@ router.add("/404", async () => {
     // If the html page got no JavaScript, we can return an empty object
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
+router.add("/courses", async () => {
+    const html = await load("JavaScript-SPA/app/fragments/courses.html")();
+    return {html, module: {init: () =>{}, cleanup: () => {}}};
+})
 
 router.start();
