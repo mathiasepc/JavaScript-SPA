@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     hideProfileMenu();
 
     profileBtn.addEventListener('click', (e) => {
+        // It stops the event from bubbling up to the DOM and triggering other events
+        // This is important for the menu to work properly
         e.stopPropagation();
         toggleProfileMenu();
     });
@@ -62,6 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Toogle menu when clicked
     burgerBtn.addEventListener('click', (e) => {
+        // It stops the event from bubbling up to the DOM and triggering other events
+        // This is important for the menu to work properly
         e.stopPropagation();
         toggleBurgerMenu();
     });
