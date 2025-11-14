@@ -43,24 +43,23 @@ Calls the add method from the router script and add new routes
 
 
 router.add(SLASH, async () => {
-    const html = await load("/fragments/home.html")();
+    const html = await load("/public/fragments/home.html")();
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 router.add("/work", async () => {
-    const html = await load("/fragments/work.html")();
+    const html = await load("/public/fragments/work.html")();
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 router.add("/education", async () => {
-    const html = await load("/fragments/education.html")();
+    const html = await load("/public/fragments/education.html")();
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 router.add("/404", async () => {
-    const html = await load("/fragments/404.html")();
-    // If the html page got no JavaScript, we can return an empty object
+    const html = await load("/public/fragments/404.html")();
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 router.add("/courses", async () => {
-    const html = await load("/fragments/courses.html")();
+    const html = await load("/public/fragments/courses.html")();
     const module = await import("./pages/coursePage.js");
     return {html, module};
 });

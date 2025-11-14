@@ -112,9 +112,10 @@ export class Router {
 
             // Call the init method if it exists, from the specific page script.
             module.init?.();
-            // Declare the cleanup function for the current page.
-            // This will be called when the user navigates to a different page if it exists.
-            this.currentCleanup = module.cleanup?.() || (() => {});
+            // Declare the cleanup function for the current page if exist.
+            // This will be called when the user navigates to a different page. 
+            // on line 98
+            this.currentCleanup = module.cleanup || (() => {});
         } catch (err) {
             if (myToken === this.navToken)
                 app.innerHTML = `<h1>❌ Fejl</h1><p>${err.message}</p>`;
