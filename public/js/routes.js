@@ -56,12 +56,12 @@ router.add("/education", async () => {
 });
 router.add("/404", async () => {
     const html = await load("/public/fragments/404.html")();
-    // If the html page got no JavaScript, we can return an empty object
     return {html, module: {init: () =>{}, cleanup: () => {}}};
 });
 router.add("/courses", async () => {
     const html = await load("/public/fragments/courses.html")();
-    return {html, module: {init: () =>{}, cleanup: () => {}}};
-})
+    const module = await import("./pages/coursePage.js");
+    return {html, module};
+});
 
 router.start();
