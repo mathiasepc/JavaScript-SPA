@@ -2,14 +2,14 @@ import {Router} from "./router.js";
 
 const SLASH = "/";
 // Cache the HTML responses for faster loading
-const cache = new Map();
+const cacheHtml = new Map();
 
 // Create a new router instance to store routes and handle navigation
 const router = new Router({mode: "history", root: SLASH});
 
 const load = (src) => async () => {
     // Check if the response is already cached
-    if (cache.has(src)) return cache.get(src);
+    if (cacheHtml.has(src)) return cacheHtml.get(src);
 
     // Cache: "no-store" the browser will not cache the response
     return await fetch(src, {cache: "no-cache"})
@@ -21,7 +21,7 @@ const load = (src) => async () => {
             const html = await response.text();
 
             // Cache the response for faster loading
-            cache.set(src, html);
+            cacheHtml.set(src, html);
 
             // Return the HTML content
             return html;
