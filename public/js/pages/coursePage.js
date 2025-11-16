@@ -7,31 +7,23 @@ export function init() {
         const btn = document.createElement('button');
         btn.type = "button";
         btn.textContent = "Show more";
-        btn.className = 'mt-2 text-sm font-medium text-blue-700 hover:underline focus:outline-none';
+        btn.className = 'mt-2 block mx-auto px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800';
+        //btn.className = 'mt-2 block mx-auto text-sm font-medium text-blue-700 hover:text-blue-900';
         card.append(btn);
-
-        const aEl = card.querySelector('a');
-        const setLinkVisible = (visible) => {
-            aEl.classList.toggle('inline-flex', visible === true);
-            aEl.classList.toggle('hidden', visible === false);
-        }
-        setLinkVisible(false);
 
         const clampEl = card.querySelector('.line-clamp-5');
         const toggleClamp = (visible) => {
-                clampEl.classList.toggle('line-clamp-5', visible === true);
-                clampEl.classList.toggle('line-clamp-none', visible === false);
+            clampEl.classList.toggle('line-clamp-5', visible === true);
+            clampEl.classList.toggle('line-clamp-none', visible === false);
         }
 
         const handler = () => {
             const isClamp = clampEl.classList.contains('line-clamp-5');
             if (isClamp) {
                 btn.textContent = "Show less";
-                setLinkVisible(true);
                 toggleClamp(false);
             } else {
                 btn.textContent = "Show more";
-                setLinkVisible(false);
                 toggleClamp(true);
             }
         }
