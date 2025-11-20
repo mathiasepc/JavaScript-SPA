@@ -7,8 +7,10 @@
 /dataSources/
 /dataSources.local.xml
 # node_modules folder
-/public/node_modules/
+/node_modules/
 # .iml files
 *.iml
 # .idea folder
 /.idea/
+# .vscode folder
+.vscode/
